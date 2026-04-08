@@ -1,253 +1,471 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="light" lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger Sarcastique 🍔</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <title>Precision · Offre gratuite | Activation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f3f3f8",
+              "on-primary-fixed": "#001a41",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "surface-container-high": "#e8e8ed",
+              "on-tertiary-fixed": "#351000",
+              "tertiary-fixed": "#ffdbcc",
+              "inverse-primary": "#adc6ff",
+              "secondary-fixed-dim": "#c6c6cb",
+              "on-surface": "#1a1c1f",
+              "primary": "#0058bc",
+              "on-primary-container": "#fefcff",
+              "outline-variant": "#c1c6d7",
+              "secondary": "#5d5e63",
+              "on-secondary-fixed": "#1a1b1f",
+              "surface-tint": "#005bc1",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#ffb595",
+              "surface-dim": "#d9dade",
+              "on-secondary-fixed-variant": "#46464b",
+              "secondary-container": "#e0dfe4",
+              "error": "#ba1a1a",
+              "tertiary": "#9e3d00",
+              "surface": "#f9f9fe",
+              "surface-container": "#ededf2",
+              "surface-container-highest": "#e2e2e7",
+              "on-background": "#1a1c1f",
+              "inverse-surface": "#2e3034",
+              "tertiary-container": "#c64f00",
+              "surface-variant": "#e2e2e7",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d8e2ff",
+              "on-tertiary-container": "#fffbff",
+              "secondary-fixed": "#e3e2e7",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f0f0f5",
+              "surface-bright": "#f9f9fe",
+              "primary-fixed-dim": "#adc6ff",
+              "primary-container": "#0070eb",
+              "background": "#f9f9fe",
+              "outline": "#717786",
+              "on-secondary-container": "#626267",
+              "on-surface-variant": "#414755",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
     <style>
-        /* Styles pour un rendu kitsch et sarcastique */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .fluid-bg {
+            background: radial-gradient(circle at top left, #e0f2ff 0%, #f9f9fe 50%, #fff9f5 100%);
+        }
+        .glow-text {
+            text-shadow: 0 0 12px rgba(0, 88, 188, 0.2);
+        }
         body {
-            font-family: 'Comic Sans MS', 'Chalkboard', cursive, sans-serif;
-            background-color: #fbe9d2;
-            color: #4f3a2b;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            min-height: 100dvh;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff7e6;
-            padding: 25px;
-            border-radius: 40px 40px 20px 20px;
-            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-            border: 3px solid #c99e6e;
+        @keyframes gentlePulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 88, 188, 0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(0, 88, 188, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 88, 188, 0); }
         }
-        h1 {
-            text-align: center;
-            color: #b3470c;
-            font-size: 2.8em;
-            text-shadow: 3px 3px 0 #f7d9aa;
-            margin: 0 0 10px;
-            border-bottom: 4px solid #e6b17e;
-            padding-bottom: 10px;
+        .cta-pulse {
+            animation: gentlePulse 1.5s infinite;
         }
-        h2, h3 {
-            color: #b3683a;
+        @media (min-width: 1024px) {
+            .glass-card {
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .glass-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 20px 30px -12px rgba(0, 88, 188, 0.12);
+            }
         }
-        h2 {
-            border-left: 8px solid #e09d6e;
-            padding-left: 15px;
-            margin-top: 30px;
-        }
-        .sarcastic-intro {
-            background-color: #ffddb0;
-            padding: 15px;
-            border-radius: 30px;
-            font-style: italic;
-            text-align: center;
-            border: 2px solid #d6894b;
-            box-shadow: inset 0 0 10px #f1c99c;
-        }
-        .ingredient-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .ingredient-list li {
-            background: #f7dbb5;
-            margin: 10px 0;
-            padding: 12px 18px;
-            border-radius: 40px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            border: 1px solid #dba16d;
-        }
-        .ingredient-list li::before {
-            content: "🍔";
-            margin-right: 15px;
-            font-size: 1.5em;
-        }
-        .instruction-step {
-            background: #f6e3cd;
-            margin: 20px 0;
-            padding: 18px;
-            border-radius: 25px;
-            border-left: 6px solid #c55a2b;
-        }
-        .instruction-step .joke {
-            color: #aa4e2c;
-            font-size: 0.95em;
-            margin-top: 12px;
-            border-top: 2px dashed #e4b68b;
-            padding-top: 8px;
-            background: #fff2dd;
-            border-radius: 15px;
-            padding: 10px;
-        }
-        button {
-            background-color: #e67e3a;
-            border: none;
-            color: white;
-            padding: 18px 30px;
-            font-size: 1.3em;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: bold;
-            box-shadow: 0 6px 0 #9f551e;
-            transition: 0.1s ease;
-            margin: 30px auto;
-            display: block;
-        }
-        button:hover {
-            background-color: #cc6729;
-            transform: translateY(4px);
-            box-shadow: 0 2px 0 #9f551e;
-        }
-        button:active {
-            transform: translateY(6px);
-            box-shadow: none;
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #8b5a3c;
-            border-top: 3px dotted #dba16d;
-            padding-top: 15px;
-        }
-        .disclaimer {
-            background-color: #eedac5;
-            padding: 12px;
-            border-radius: 15px;
-            font-size: 0.8em;
-        }
-        .burger-svg {
-            max-width: 200px;
-            margin: 10px auto;
-            display: block;
-        }
-        .highlight {
-            background-color: #ffc489;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 20px;
-        }
-        #extraJoke {
-            text-align:center;
-            margin:20px 0;
-            min-height: 50px;
-            background:#fad6b3;
-            border-radius:30px;
-            padding:12px;
-            color:#7b4f2b;
-            font-weight:bold;
+        canvas {
+            touch-action: none;
+            cursor: crosshair;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>🍔 LE BURGER DE L'AMERTUME 🍔</h1>
+<body class="bg-surface font-body text-on-surface min-h-screen selection:bg-primary-fixed fluid-bg antialiased">
 
-        <div class="sarcastic-intro">
-            <p>😤 Vous pensiez qu'un burger, c'était simple ? Détrompez-vous, Einstein.</p>
-            <p>Bienvenue dans l'univers impitoyable du <span class="highlight">burger maison</span>. Entre le pain qui s'effrite et la viande trop cuite, vous allez adorer détester ça.</p>
+    <header class="fixed top-0 w-full z-50 bg-white flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+        <div class="flex items-center gap-3">
+            <h1 class="font-sans antialiased tracking-tight font-semibold text-lg text-blue-700">Activation · Pack Visibilité</h1>
         </div>
+    </header>
 
-        <!-- SVG d'un burger triste (inline) -->
-        <svg class="burger-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <rect width="200" height="200" fill="#fbe9d2" />
-            <circle cx="100" cy="100" r="70" fill="#e6b17e" />
-            <circle cx="100" cy="100" r="55" fill="#c97e4b" />
-            <circle cx="100" cy="100" r="40" fill="#a8622c" />
-            <circle cx="70" cy="80" r="8" fill="#ffe68f" />
-            <circle cx="130" cy="80" r="8" fill="#ffe68f" />
-            <ellipse cx="100" cy="120" rx="30" ry="10" fill="#f2c3a0" />
-            <text x="85" y="165" fill="#5e3a1f" font-size="18" font-family="Comic Sans MS">:-(</text>
-        </svg>
+    <main id="mainContent" class="pt-24 pb-36 px-5 sm:px-6 lg:px-8 max-w-lg lg:max-w-4xl mx-auto transition-all duration-200">
+        
+        <div id="formSection">
+            <section class="mb-10 mt-4 text-center lg:text-left">
+                <span class="inline-block bg-primary/10 text-primary font-semibold tracking-wider text-[11px] uppercase rounded-full px-3 py-1 glow-text mb-4">✨ Offre de lancement ✨</span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] mb-4 text-on-surface">
+                    Pack Visibilité<br>
+                    <span class="text-primary">1er mois offert</span>
+                </h2>
+                <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Lancez votre visibilité sans frais pendant 30 jours. 
+                    <span class="text-primary font-semibold">Gratuit aujourd’hui, sans engagement caché.</span>
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3 justify-center lg:justify-start">
+                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">calendar_month</span> 1 mois offert</span>
+                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">verified</span> Sans engagement</span>
+                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">schedule</span> Résiliation simple</span>
+                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">attach_money</span> 100% gratuit</span>
+                </div>
+            </section>
 
-        <h2>🔥 RECETTE : "LE BURGER QUI VOUS VEUT DU BIEN (ou pas)" 🔥</h2>
-        <p style="text-align: center;"><em>Pour 1 personne affamée, ou 2 qui font semblant de partager.</em></p>
+            <form id="activationForm" class="space-y-8">
+                <section class="space-y-4">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">person</span> Vos informations</h3>
+                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                            <div class="space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Prénom</label>
+                                <input id="prenom" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Jean" type="text" required>
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Nom</label>
+                                <input id="nom" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Dupont" type="text" required>
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Adresse e-mail</label>
+                            <div class="relative">
+                                <input id="email" required type="email" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="jean.dupont@email.com">
+                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">mail</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <h3>🥬 INGRÉDIENTS (la liste de courses de l'échec annoncé)</h3>
-        <ul class="ingredient-list">
-            <li>1 pain à burger <span style="font-weight:normal; margin-left:auto;">(industriel, on n'a pas que ça à faire)</span></li>
-            <li>1 steack haché <span style="font-weight:normal; margin-left:auto;">(5% de viande, 95% d'espoir)</span></li>
-            <li>1 tranche de cheddar <span style="font-weight:normal; margin-left:auto;">(ou un fromage qui ressemble à du plastique)</span></li>
-            <li>Quelques feuilles de salade <span style="font-weight:normal; margin-left:auto;">(pour la conscience)</span></li>
-            <li>2 rondelles de tomate <span style="font-weight:normal; margin-left:auto;">(qui vont glisser, c'est garanti)</span></li>
-            <li>Oignons rouges <span style="font-weight:normal; margin-left:auto;">(pour pleurer sur votre burger raté)</span></li>
-            <li>Sauce mystère <span style="font-weight:normal; margin-left:auto;">(ketchup + mayo, mais taisez-vous)</span></li>
-            <li>Cornichons <span style="font-weight:normal; margin-left:auto;">(pour faire genre vous êtes un chef)</span></li>
-        </ul>
+                <section class="space-y-4">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">home</span> Votre adresse</h3>
+                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Pays</label>
+                            <input id="pays" required type="text" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="France, Belgique, Suisse...">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Adresse (rue)</label>
+                            <input id="adresse" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="123 Avenue des Champs-Élysées" type="text">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-5 gap-4">
+                            <div class="sm:col-span-3 space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Ville</label>
+                                <input id="ville" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Paris" type="text">
+                            </div>
+                            <div class="sm:col-span-2 space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Code postal</label>
+                                <input id="code_postal" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="75008" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <h3>📝 INSTRUCTIONS PREMIUM (suivez-les dans le désordre)</h3>
+                <section class="space-y-4">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">account_balance</span> Informations bancaires</h3>
+                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Titulaire du compte</label>
+                            <div class="relative">
+                                <input id="titulaire" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Jean DUPONT" type="text">
+                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">person</span>
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">IBAN</label>
+                            <div class="relative">
+                                <input id="iban" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 font-mono tracking-tighter transition-all text-sm" placeholder="FR76 3000 6000 0102 3456 7890 123" type="text">
+                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">account_balance</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="instruction-step">
-            <p><strong>Étape 1 :</strong> Faites chauffer une poêle. Pendant ce temps, sortez le steack du frigo et regardez-le d'un air menaçant.</p>
-            <div class="joke">💬 Blague : Pourquoi les burgers ne vont-ils jamais à la plage ? Parce que le pain a peur de prendre un bain ! (Rire poli)</div>
-        </div>
+                <!-- Section Contrat avec signature interactive -->
+                <section class="space-y-4">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">description</span> Contrat</h3>
+                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                            <div class="space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Fait à</label>
+                                <input id="fait_a" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Ville" type="text" required>
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Le</label>
+                                <input id="date_contrat" type="date" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface transition-all text-sm" required>
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Signature</label>
+                            <div class="relative flex flex-col items-center space-y-3">
+                                <canvas id="signatureCanvas" width="500" height="200" style="border: 2px solid #cbd5e1; border-radius: 1rem; background-color: white; width: 100%; height: auto; max-width: 500px; touch-action: none;" class="shadow-inner"></canvas>
+                                <button type="button" id="clearSignature" class="text-xs bg-surface-container-high hover:bg-surface-container text-on-surface-variant px-4 py-2 rounded-full flex items-center gap-1 transition-all">
+                                    <span class="material-symbols-outlined text-sm">delete</span> Effacer la signature
+                                </button>
+                                <input type="hidden" id="signatureData" value="">
+                            </div>
+                            <p class="text-xs text-on-surface-variant/60 mt-1">Signez dans la zone ci-dessus (dessinez avec la souris ou le doigt).</p>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Lien contrat</label>
+                            <div class="relative">
+                                <input id="lien_contrat" type="url" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline/40 transition-all text-sm bg-gray-100 cursor-pointer" value="https://drive.google.com/file/d/1iJcrvjNVVr8AJeXeNwo2i145EiUPuC_H/view?usp=drive_link" readonly onclick="window.open(this.value, '_blank')">
+                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">open_in_new</span>
+                            </div>
+                            <p class="text-xs text-on-surface-variant/60 mt-1">Cliquez pour consulter le contrat</p>
+                        </div>
+                    </div>
+                </section>
+            </form>
 
-        <div class="instruction-step">
-            <p><strong>Étape 2 :</strong> Déposez le steack dans la poêle. Écoutez le bruit grésillant, c'est le seul moment de bonheur de la journée.</p>
-            <div class="joke">💬 Blague : Quel est le sport préféré du steack haché ? Le lancer de poêle, surtout quand il est trop cuit.</div>
-        </div>
-
-        <div class="instruction-step">
-            <p><strong>Étape 3 :</strong> Salez, poivrez. N'en mettez pas trop, vous allez déjà pleurer sur le résultat final.</p>
-            <div class="joke">💬 Blague : Pourquoi les oignons pleurent-ils toujours ? Parce qu'ils savent ce qui va leur arriver dans le burger.</div>
-        </div>
-
-        <div class="instruction-step">
-            <p><strong>Étape 4 :</strong> Une fois la viande cuite (ou carbonisée, c'est selon), déposez le cheddar dessus pour qu'il fonde. Ou pas, selon l'humeur du fromage.</p>
-            <div class="joke">💬 Blague : Que dit le cheddar quand il est fondu ? "Je n'en peux plus, je suis sous pression !"</div>
-        </div>
-
-        <div class="instruction-step">
-            <p><strong>Étape 5 :</strong> Toastez légèrement le pain. Si vous le brûlez, dites que c'est une version "croustillante".</p>
-            <div class="joke">💬 Blague : Pourquoi le pain burger va toujours chez le psy ? Parce qu'il est toujours coupé en deux !</div>
-        </div>
-
-        <div class="instruction-step">
-            <p><strong>Étape 6 :</strong> Assemblez le burger : base du pain, sauce, salade, tomate, oignons, steack, cornichons, chapeau. Appuyez un bon coup pour que tout dégouline sur vos doigts.</p>
-            <div class="joke">💬 Blague : Comment appelle-t-on un burger qui fait du yoga ? Un "ham-ateur" ! (Ne quittez pas)</div>
-        </div>
-
-        <div class="instruction-step">
-            <p><strong>Étape 7 :</strong> Prenez une photo pour Instagram avant que tout ne s'écroule. Légendez : "Trop bon !" avec des hashtags.</p>
-            <div class="joke">💬 Blague : Pourquoi les burgers n'ont-ils pas d'amis ? Parce qu'ils sont toujours entourés de pains !</div>
-        </div>
-
-        <button id="jokeButton">🍔 ENCORE UNE BLAGUE (POURRIE) 🍔</button>
-        <div id="extraJoke"></div>
-
-        <footer>
-            <p>© 2025 - Burger & Désespoir Ltd. (Limited, comme votre patience)</p>
-            <div class="disclaimer">
-                ⚠️ Ce site peut provoquer des fous rires nerveux, des envies subites de fast-food, et une aversion pour les cornichons. Les blagues sont servies avec modération (non).
+            <div class="bg-surface-container-low rounded-2xl p-6 flex flex-col sm:flex-row sm:items-start gap-4 mt-10 mb-12 ring-1 ring-black/[0.03]">
+                <div class="bg-surface-container-highest p-3 rounded-xl text-primary self-start">
+                    <span class="material-symbols-outlined">info</span>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-on-surface text-base">À propos de votre offre gratuite</h4>
+                    <p class="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                        Vous bénéficiez d’un <strong class="text-primary">premier mois totalement gratuit</strong> (sans aucun prélèvement). 
+                        Conformément aux normes européennes, un préavis de 14 jours est requis avant le premier prélèvement automatique après la période d’essai. 
+                        Votre mandat SEPA ne sera débité qu’à l’issue du mois offert, sauf résiliation de votre part. Aucun frais caché.
+                    </p>
+                    <div class="mt-3 flex flex-wrap gap-2 text-xs text-on-surface-variant/80">
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Engagement sans risque</span>
+                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">cancel</span> Annulation gratuite</span>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+
+        <div id="thankyouSection" class="hidden text-center py-10">
+            <div class="glass-card rounded-[2rem] p-8 sm:p-12 shadow-2xl shadow-primary/10 ring-1 ring-white/50">
+                <span class="material-symbols-outlined text-6xl text-primary mb-4">celebration</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface mb-3">Merci !</h2>
+                <p class="text-on-surface-variant text-base sm:text-lg max-w-md mx-auto leading-relaxed">
+                    Votre demande pour le mois gratuit a bien été reçue. Notre équipe traite votre dossier et vous recontactera dans les plus brefs délais pour finaliser l’activation.
+                </p>
+                <div class="mt-6 flex justify-center gap-2 text-sm text-on-surface-variant">
+                    <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">schedule</span> Traitement sous 24h</span>
+                    <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">mail</span> Un email de confirmation vous parviendra</span>
+                </div>
+                <button onclick="window.location.reload()" class="mt-8 inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-semibold px-5 py-2 rounded-full transition-all">Retour à l’accueil</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="floatingBtn" class="fixed bottom-6 left-1/2 -translate-x-1/2 w-full max-w-lg lg:max-w-4xl px-5 sm:px-6 lg:px-8 pointer-events-none z-40 transition-all duration-200">
+        <button id="submitBtn" class="pointer-events-auto w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3.5 sm:py-5 rounded-[2rem] font-bold text-sm sm:text-xl shadow-2xl shadow-blue-500/40 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 cta-pulse">
+            <span class="material-symbols-outlined text-xl sm:text-3xl">celebration</span>
+            <span class="whitespace-nowrap">✅ Confirmer mon mois gratuit</span>
+            <span class="inline-flex items-center rounded-full bg-white/30 text-white text-[10px] sm:text-sm font-bold px-2 sm:px-3 py-0.5 sm:py-1 ml-0 sm:ml-1">1 mois offert</span>
+        </button>
+        <p class="text-center text-[10px] sm:text-xs text-blue-800/80 mt-2 sm:mt-3 pointer-events-auto font-medium">🔒 Aucun prélèvement maintenant · Je commence à travailler avec vous</p>
     </div>
 
     <script>
-        // Liste de blagues supplémentaires pour le bouton
-        const blagues = [
-            "Quel est le comble pour un burger ? Avoir la frite !",
-            "Que fait un burger dans l'espace ? Il tourne autour du pain !",
-            "Pourquoi les burgers se battent-ils toujours ? Parce qu'ils veulent le dernier mot (le chapeau).",
-            "Qu'est-ce qu'un burger a dit à la salade ? 'Laisse tomber, tu ne resteras pas longtemps dans mon cœur.'",
-            "Quel est le plat préféré des pirates ? Le burger aux oignons, avec une sauce 'arrr-moulade'.",
-            "Pourquoi le fromage a-t-il peur du burger ? Parce qu'il sait qu'il va finir fondu !",
-            "Comment appelle-t-on un burger végétarien ? Un vœu pieux.",
-            "Quel est le burger le plus drôle ? Celui qui a de l'humour noir (la viande trop cuite).",
-            "Pourquoi le pain burger est-il si prétentieux ? Parce qu'il se prend pour le roi du sandwich.",
-            "Que dit un steak haché quand on le pose sur le grill ? 'Ah, ça me chauffe !'"
-        ];
+        // Signature canvas - correction du décalage
+        const canvas = document.getElementById('signatureCanvas');
+        const ctx = canvas.getContext('2d');
+        let painting = false;
 
-        document.getElementById('jokeButton').addEventListener('click', function() {
-            const randomIndex = Math.floor(Math.random() * blagues.length);
-            document.getElementById('extraJoke').innerText = blagues[randomIndex];
+        function resizeCanvas() {
+            // Récupérer la taille d'affichage (CSS)
+            const rect = canvas.getBoundingClientRect();
+            // On fixe les dimensions internes du canvas à la taille d'affichage réelle en pixels
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            // Appliquer les propriétés de dessin
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#0058bc';
+            // Restaurer l'image de signature si elle existe
+            const savedData = document.getElementById('signatureData').value;
+            if (savedData) {
+                const img = new Image();
+                img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                img.src = savedData;
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        // Appeler au chargement et au redimensionnement
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function getCanvasCoordinates(e) {
+            const rect = canvas.getBoundingClientRect();
+            let clientX, clientY;
+            if (e.touches) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+            // Coordonnées relatives au canvas (en pixels)
+            let x = clientX - rect.left;
+            let y = clientY - rect.top;
+            // Limiter aux bords du canvas
+            x = Math.max(0, Math.min(canvas.width, x));
+            y = Math.max(0, Math.min(canvas.height, y));
+            return { x, y };
+        }
+
+        function startPaint(e) {
+            painting = true;
+            const { x, y } = getCanvasCoordinates(e);
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            e.preventDefault();
+        }
+
+        function paint(e) {
+            if (!painting) return;
+            const { x, y } = getCanvasCoordinates(e);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            e.preventDefault();
+        }
+
+        function endPaint() {
+            painting = false;
+            // Sauvegarder l'image en base64
+            const dataURL = canvas.toDataURL('image/png');
+            document.getElementById('signatureData').value = dataURL;
+        }
+
+        canvas.addEventListener('mousedown', startPaint);
+        canvas.addEventListener('mousemove', paint);
+        canvas.addEventListener('mouseup', endPaint);
+        canvas.addEventListener('mouseleave', endPaint);
+        canvas.addEventListener('touchstart', startPaint);
+        canvas.addEventListener('touchmove', paint);
+        canvas.addEventListener('touchend', endPaint);
+        canvas.addEventListener('touchcancel', endPaint);
+
+        document.getElementById('clearSignature').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('signatureData').value = '';
+        });
+
+        // Mapping des champs avec les identifiants du nouveau Google Form
+        const mapping = {
+            prenom: "entry.1065046570",
+            nom: "entry.1415507476",
+            email: "entry.669495302",
+            pays: "entry.1522005248",
+            adresse: "entry.2015732434",
+            ville: "entry.1591403477",
+            code_postal: "entry.1357869243",
+            titulaire: "entry.2064233283",
+            iban: "entry.1032866568",
+            fait_a: "entry.1032718638",
+            date_contrat: "entry.1298713110",
+            signature: "entry.130037026"
+        };
+
+        const googleFormAction = "https://docs.google.com/forms/d/e/1FAIpQLScDlbQiMjK9hUlkGr32Pl-9cAdN7sg8_TsEKzdxXQRwjBOj-A/formResponse";
+
+        const submitBtn = document.getElementById('submitBtn');
+        const form = document.getElementById('activationForm');
+        const formSection = document.getElementById('formSection');
+        const thankyouSection = document.getElementById('thankyouSection');
+        const floatingBtn = document.getElementById('floatingBtn');
+
+        submitBtn.addEventListener('click', function(event) {
+            const signatureData = document.getElementById('signatureData').value;
+            if (!signatureData) {
+                if (!confirm("Vous n'avez pas signé. Voulez-vous continuer sans signature ?")) {
+                    return;
+                }
+            }
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const fields = {
+                prenom: document.getElementById('prenom').value.trim(),
+                nom: document.getElementById('nom').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                pays: document.getElementById('pays').value.trim(),
+                adresse: document.getElementById('adresse').value.trim(),
+                ville: document.getElementById('ville').value.trim(),
+                code_postal: document.getElementById('code_postal').value.trim(),
+                titulaire: document.getElementById('titulaire').value.trim(),
+                iban: document.getElementById('iban').value.trim(),
+                fait_a: document.getElementById('fait_a').value.trim(),
+                date_contrat: document.getElementById('date_contrat').value,
+                signature: document.getElementById('signatureData').value
+            };
+
+            const formData = new FormData();
+            for (let [fieldId, entryId] of Object.entries(mapping)) {
+                const value = fields[fieldId];
+                if (value && entryId) {
+                    formData.append(entryId, value);
+                }
+            }
+            formData.append('submit', 'Envoyer');
+
+            submitBtn.disabled = true;
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined text-xl sm:text-3xl">hourglass_empty</span> Envoi en cours...';
+
+            fetch(googleFormAction, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                formSection.classList.add('hidden');
+                floatingBtn.classList.add('hidden');
+                thankyouSection.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }).catch((error) => {
+                console.error('Erreur d\'envoi:', error);
+                alert('Une erreur est survenue. Veuillez réessayer.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
         });
     </script>
 </body>
