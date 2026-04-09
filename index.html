@@ -18,10 +18,10 @@
       theme: {
         extend: {
           colors: {
-            primary: "#3B82F6",     // bleu tech
+            primary: "#3B82F6",
             "primary-dark": "#2563EB",
             "primary-light": "#EFF6FF",
-            "secondary": "#8B5CF6",  // violet indigo
+            "secondary": "#8B5CF6",
             "secondary-bg": "#F8FAFC",
             "background-light": "#FFFFFF",
             "background-dark": "#0F172A",
@@ -91,6 +91,15 @@
     .btn-cta:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 15px 40px rgba(59,130,246,0.5);
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(37,211,102,0.5);
     }
     .btn-secondary {
       background: #334155;
@@ -208,7 +217,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* Logo stylé tech */
     .logo-tech {
       background: linear-gradient(135deg, #3B82F6, #8B5CF6);
       width: 48px;
@@ -238,7 +246,7 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased">
 
-<!-- HEADER avec logo tech + pas de numéro -->
+<!-- HEADER avec logo tech + WhatsApp -->
 <header class="bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md py-3 shadow-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
   <div class="container mx-auto px-4 flex justify-between items-center">
     <div class="flex items-center gap-3">
@@ -255,13 +263,18 @@
         <span class="text-xs font-semibold bg-primary/10 text-primary px-2 py-0.5 rounded-full">mavillepro</span>
       </div>
     </div>
-    <a href="#contact" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-5 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
-      <span class="material-icons text-sm">description</span> Devis gratuit
-    </a>
+    <div class="flex gap-3">
+      <a href="#contact" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-5 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+        <span class="material-icons text-sm">description</span> Devis gratuit
+      </a>
+      <a href="https://wa.me/33685879503?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20gratuit%20pour%20le%20programme%20MVP." target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+        <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+      </a>
+    </div>
   </div>
 </header>
 
-<!-- HERO SECTION (sans téléphone) -->
+<!-- HERO SECTION -->
 <section class="hero-gradient text-white py-12 md:py-20 relative overflow-hidden">
   <div class="container mx-auto px-4 text-center relative z-10">
     <div class="inline-flex items-center gap-1 bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-semibold tracking-wide mb-6 border border-white/20 text-white">
@@ -351,12 +364,12 @@
           <tr><td class="p-4 font-semibold">Adapté aux PME</td><td class="p-4">Budget, temps, besoins réels</td><td class="p-4 text-gray-500">Cible grands comptes</td><td class="p-4 text-gray-500">Contenu générique</td></tr>
           <tr><td class="p-4 font-semibold">Engagement KPI</td><td class="p-4">Oui (+30% leads ou -50% CPA)</td><td class="p-4 text-gray-500">Rarement</td><td class="p-4 text-gray-500">Non</td></tr>
         </tbody>
-      82
+      92
     </div>
   </div>
 </section>
 
-<!-- OFFRE UNIQUE (sans prix, sans numéro) -->
+<!-- OFFRE UNIQUE (sans prix) -->
 <section class="py-16 bg-secondary-bg dark:bg-gray-900">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-4">Une seule offre <span class="text-primary">tout-en-un</span></h2>
@@ -387,7 +400,7 @@
   </div>
 </section>
 
-<!-- TÉMOIGNAGES (avis clients) -->
+<!-- TÉMOIGNAGES -->
 <section class="py-16 bg-white dark:bg-background-dark">
   <div class="container mx-auto px-4">
     <div class="text-center mb-10">
@@ -430,7 +443,7 @@
   </div>
 </section>
 
-<!-- CONTACT RAPIDE (sans numéro, sans email) -->
+<!-- CONTACT RAPIDE (formulaire seul, sans numéro) -->
 <section id="contact" class="py-16 bg-white dark:bg-background-dark">
   <div class="container mx-auto px-4">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -459,7 +472,7 @@
   </div>
 </section>
 
-<!-- FOOTER (sans numéro ni email) -->
+<!-- FOOTER -->
 <footer class="bg-surface-light dark:bg-gray-900 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
   <div class="container mx-auto px-4 text-center">
     <div class="flex justify-center mb-6">
@@ -482,14 +495,24 @@
   </div>
 </footer>
 
-<!-- STICKY CTA (sans téléphone) -->
+<!-- STICKY CTA avec WhatsApp -->
 <div class="sticky-cta bg-white dark:bg-surface-dark shadow-2xl border-t dark:border-gray-700" id="sticky-cta">
   <div class="container mx-auto px-4 py-3">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between gap-3 flex-wrap">
       <div class="hidden sm:block"><div class="font-bold text-charcoal dark:text-white">Prêt à devenir MVP ?</div><div class="text-sm text-gray-500">Audit stratégique offert</div></div>
-      <a href="#contact" class="btn-cta text-white px-6 py-2 rounded-xl font-bold text-center">Devis gratuit</a>
+      <div class="flex gap-3">
+        <a href="#contact" class="btn-cta text-white px-6 py-2 rounded-xl font-bold text-center">Devis gratuit</a>
+        <a href="https://wa.me/33685879503?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20gratuit%20pour%20le%20programme%20MVP." target="_blank" class="btn-whatsapp text-white px-6 py-2 rounded-xl font-bold text-center flex items-center gap-2"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- FLOATING CTA (WhatsApp uniquement) -->
+<div class="floating-cta hidden lg:flex">
+  <a href="https://wa.me/33685879503?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20gratuit%20pour%20le%20programme%20MVP." target="_blank" class="floating-btn bg-green-500" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </div>
 
 <!-- SUCCESS POPUP -->
@@ -538,7 +561,7 @@
     const ca = document.getElementById('ca').value;
     const msg = document.getElementById('message').value.trim();
     if (!prenom || !nom || !tel) return alert('Veuillez remplir prénom, nom et téléphone.');
-    // Simuler envoi (pas de numéro ni mail visible)
+    // Simulation d'envoi (les données sont capturées)
     console.log("Demande envoyée :", { prenom, nom, tel, email, ca, msg });
     showSuccessMessage();
     document.getElementById('contact-form').reset();
