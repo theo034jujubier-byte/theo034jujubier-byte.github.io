@@ -1,472 +1,552 @@
 <!DOCTYPE html>
-<html class="light" lang="fr">
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
-    <title>Precision · Offre gratuite | Activation</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container-low": "#f3f3f8",
-              "on-primary-fixed": "#001a41",
-              "on-tertiary-fixed-variant": "#7c2e00",
-              "on-tertiary": "#ffffff",
-              "on-primary-fixed-variant": "#004493",
-              "surface-container-high": "#e8e8ed",
-              "on-tertiary-fixed": "#351000",
-              "tertiary-fixed": "#ffdbcc",
-              "inverse-primary": "#adc6ff",
-              "secondary-fixed-dim": "#c6c6cb",
-              "on-surface": "#1a1c1f",
-              "primary": "#0058bc",
-              "on-primary-container": "#fefcff",
-              "outline-variant": "#c1c6d7",
-              "secondary": "#5d5e63",
-              "on-secondary-fixed": "#1a1b1f",
-              "surface-tint": "#005bc1",
-              "on-error-container": "#93000a",
-              "surface-container-lowest": "#ffffff",
-              "tertiary-fixed-dim": "#ffb595",
-              "surface-dim": "#d9dade",
-              "on-secondary-fixed-variant": "#46464b",
-              "secondary-container": "#e0dfe4",
-              "error": "#ba1a1a",
-              "tertiary": "#9e3d00",
-              "surface": "#f9f9fe",
-              "surface-container": "#ededf2",
-              "surface-container-highest": "#e2e2e7",
-              "on-background": "#1a1c1f",
-              "inverse-surface": "#2e3034",
-              "tertiary-container": "#c64f00",
-              "surface-variant": "#e2e2e7",
-              "on-secondary": "#ffffff",
-              "primary-fixed": "#d8e2ff",
-              "on-tertiary-container": "#fffbff",
-              "secondary-fixed": "#e3e2e7",
-              "on-primary": "#ffffff",
-              "inverse-on-surface": "#f0f0f5",
-              "surface-bright": "#f9f9fe",
-              "primary-fixed-dim": "#adc6ff",
-              "primary-container": "#0070eb",
-              "background": "#f9f9fe",
-              "outline": "#717786",
-              "on-secondary-container": "#626267",
-              "on-surface-variant": "#414755",
-              "on-error": "#ffffff",
-              "error-container": "#ffdad6"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVP | Formation & Accompagnement Digital pour PME-TPE</title>
+  <meta name="description" content="MVP – Programme hybride : formation actionnable + accompagnement opérationnel. Maîtrisez l'acquisition digitale sans stress. Devis gratuit.">
+
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3B82F6",     // bleu tech
+            "primary-dark": "#2563EB",
+            "primary-light": "#EFF6FF",
+            "secondary": "#8B5CF6",  // violet indigo
+            "secondary-bg": "#F8FAFC",
+            "background-light": "#FFFFFF",
+            "background-dark": "#0F172A",
+            "surface-light": "#F1F5F9",
+            "surface-dark": "#1E293B",
+            "text-light": "#0F172A",
+            "text-dark": "#F1F5F9",
+            "text-muted-light": "#475569",
+            "text-muted-dark": "#94A3B8",
+            charcoal: "#1E293B",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+            card: "0 2px 10px rgba(0,0,0,0.06)",
+            cta: "0 10px 30px rgba(59,130,246,0.4)",
+            glow: "0 0 20px rgba(59,130,246,0.3)",
+          },
+          animation: {
+            "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            "float": "float 3s ease-in-out infinite",
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-10px)" },
             },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
           },
         },
-      }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        .fluid-bg {
-            background: radial-gradient(circle at top left, #e0f2ff 0%, #f9f9fe 50%, #fff9f5 100%);
-        }
-        .glow-text {
-            text-shadow: 0 0 12px rgba(0, 88, 188, 0.2);
-        }
-        body {
-            min-height: 100dvh;
-        }
-        @keyframes gentlePulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 88, 188, 0.4); }
-            70% { box-shadow: 0 0 0 12px rgba(0, 88, 188, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 88, 188, 0); }
-        }
-        .cta-pulse {
-            animation: gentlePulse 1.5s infinite;
-        }
-        @media (min-width: 1024px) {
-            .glass-card {
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
-            }
-            .glass-card:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 20px 30px -12px rgba(0, 88, 188, 0.12);
-            }
-        }
-        canvas {
-            touch-action: none;
-            cursor: crosshair;
-        }
-    </style>
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0F172A;
+      scroll-behavior: smooth;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      position: relative;
+    }
+    .hero-gradient::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-cta {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-cta:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(59,130,246,0.5);
+    }
+    .btn-secondary {
+      background: #334155;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: #1E293B;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .shine-effect {
+      position: relative;
+      overflow: hidden;
+    }
+    .shine-effect::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+      transform: rotate(45deg) translateX(-100%);
+      transition: transform 0.6s;
+    }
+    .shine-effect:hover::after {
+      transform: rotate(45deg) translateX(100%);
+    }
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .popup-overlay.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-content.open {
+      max-height: 500px;
+    }
+    .floating-cta {
+      position: fixed;
+      right: 20px;
+      bottom: 140px;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floating-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      animation: float-btn 3s ease-in-out infinite;
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+    }
+    @keyframes float-btn {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #3B82F6;
+      animation: confetti-fall 3s linear forwards;
+      z-index: 9998;
+    }
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Logo stylé tech */
+    .logo-tech {
+      background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+      width: 48px;
+      height: 48px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(59,130,246,0.3);
+    }
+    .logo-tech svg {
+      width: 32px;
+      height: 32px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .logo-text {
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
 </head>
-<body class="bg-surface font-body text-on-surface min-h-screen selection:bg-primary-fixed fluid-bg antialiased">
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased">
 
-    <header class="fixed top-0 w-full z-50 bg-white flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-        <div class="flex items-center gap-3">
-            <h1 class="font-sans antialiased tracking-tight font-semibold text-lg text-blue-700">Activation · Pack Visibilité</h1>
-        </div>
-    </header>
-
-    <main id="mainContent" class="pt-24 pb-36 px-5 sm:px-6 lg:px-8 max-w-lg lg:max-w-4xl mx-auto transition-all duration-200">
-        
-        <div id="formSection">
-            <section class="mb-10 mt-4 text-center lg:text-left">
-                <span class="inline-block bg-primary/10 text-primary font-semibold tracking-wider text-[11px] uppercase rounded-full px-3 py-1 glow-text mb-4">✨ Offre de lancement ✨</span>
-                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] mb-4 text-on-surface">
-                    Pack Visibilité<br>
-                    <span class="text-primary">1er mois offert</span>
-                </h2>
-                <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Lancez votre visibilité sans frais pendant 30 jours. 
-                    <span class="text-primary font-semibold">Gratuit aujourd’hui, sans engagement caché.</span>
-                </p>
-                <div class="mt-4 flex flex-wrap gap-3 justify-center lg:justify-start">
-                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">calendar_month</span> 1 mois offert</span>
-                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">verified</span> Sans engagement</span>
-                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">schedule</span> Résiliation simple</span>
-                    <span class="inline-flex items-center gap-1 text-sm bg-white/60 rounded-full px-3 py-1 shadow-sm"><span class="material-symbols-outlined text-primary text-base">attach_money</span> 100% gratuit</span>
-                </div>
-            </section>
-
-            <form id="activationForm" class="space-y-8">
-                <section class="space-y-4">
-                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">person</span> Vos informations</h3>
-                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                            <div class="space-y-1.5">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Prénom</label>
-                                <input id="prenom" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Jean" type="text" required>
-                            </div>
-                            <div class="space-y-1.5">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Nom</label>
-                                <input id="nom" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Dupont" type="text" required>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Adresse e-mail</label>
-                            <div class="relative">
-                                <input id="email" required type="email" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="jean.dupont@email.com">
-                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">mail</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="space-y-4">
-                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">home</span> Votre adresse</h3>
-                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Pays</label>
-                            <input id="pays" required type="text" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="France, Belgique, Suisse...">
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Adresse (rue)</label>
-                            <input id="adresse" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="123 Avenue des Champs-Élysées" type="text">
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-5 gap-4">
-                            <div class="sm:col-span-3 space-y-1.5">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Ville</label>
-                                <input id="ville" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Paris" type="text">
-                            </div>
-                            <div class="sm:col-span-2 space-y-1.5">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Code postal</label>
-                                <input id="code_postal" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="75008" type="text">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="space-y-4">
-                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">account_balance</span> Informations bancaires</h3>
-                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Titulaire du compte</label>
-                            <div class="relative">
-                                <input id="titulaire" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Jean DUPONT" type="text">
-                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">person</span>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">IBAN</label>
-                            <div class="relative">
-                                <input id="iban" required class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 font-mono tracking-tighter transition-all text-sm" placeholder="FR76 3000 6000 0102 3456 7890 123" type="text">
-                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">account_balance</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Section Contrat avec signature interactive -->
-                <section class="space-y-4">
-                    <h3 class="text-xs font-black uppercase tracking-widest text-primary/60 px-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">description</span> Contrat</h3>
-                    <div class="glass-card rounded-[2rem] p-5 sm:p-6 shadow-2xl shadow-primary/5 ring-1 ring-white/50 space-y-5">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                            <div class="space-y-1.5">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Fait à</label>
-                                <input id="fait_a" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/40 transition-all text-sm" placeholder="Ville" type="text" required>
-                            </div>
-                            <div class="space-y-1.5">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Le</label>
-                                <input id="date_contrat" type="date" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 text-on-surface transition-all text-sm" required>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Signature</label>
-                            <div class="relative flex flex-col items-center space-y-3">
-                                <canvas id="signatureCanvas" width="500" height="200" style="border: 2px solid #cbd5e1; border-radius: 1rem; background-color: white; width: 100%; height: auto; max-width: 500px; touch-action: none;" class="shadow-inner"></canvas>
-                                <button type="button" id="clearSignature" class="text-xs bg-surface-container-high hover:bg-surface-container text-on-surface-variant px-4 py-2 rounded-full flex items-center gap-1 transition-all">
-                                    <span class="material-symbols-outlined text-sm">delete</span> Effacer la signature
-                                </button>
-                                <input type="hidden" id="signatureData" value="">
-                            </div>
-                            <p class="text-xs text-on-surface-variant/60 mt-1">Signez dans la zone ci-dessus (dessinez avec la souris ou le doigt).</p>
-                        </div>
-                        <div class="space-y-1.5">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">Lien contrat</label>
-                            <div class="relative">
-                                <input id="lien_contrat" type="url" class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3.5 text-on-surface placeholder:text-outline/40 transition-all text-sm bg-gray-100 cursor-pointer" value="https://drive.google.com/file/d/1iJcrvjNVVr8AJeXeNwo2i145EiUPuC_H/view?usp=drive_link" readonly onclick="window.open(this.value, '_blank')">
-                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline/40 text-lg">open_in_new</span>
-                            </div>
-                            <p class="text-xs text-on-surface-variant/60 mt-1">Cliquez pour consulter le contrat</p>
-                        </div>
-                    </div>
-                </section>
-            </form>
-
-            <div class="bg-surface-container-low rounded-2xl p-6 flex flex-col sm:flex-row sm:items-start gap-4 mt-10 mb-12 ring-1 ring-black/[0.03]">
-                <div class="bg-surface-container-highest p-3 rounded-xl text-primary self-start">
-                    <span class="material-symbols-outlined">info</span>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-on-surface text-base">À propos de votre offre gratuite</h4>
-                    <p class="text-on-surface-variant text-sm mt-1 leading-relaxed">
-                        Vous bénéficiez d’un <strong class="text-primary">premier mois totalement gratuit</strong> (sans aucun prélèvement). 
-                        Conformément aux normes européennes, un préavis de 14 jours est requis avant le premier prélèvement automatique après la période d’essai. 
-                        Votre mandat SEPA ne sera débité qu’à l’issue du mois offert, sauf résiliation de votre part. Aucun frais caché.
-                    </p>
-                    <div class="mt-3 flex flex-wrap gap-2 text-xs text-on-surface-variant/80">
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Engagement sans risque</span>
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">cancel</span> Annulation gratuite</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="thankyouSection" class="hidden text-center py-10">
-            <div class="glass-card rounded-[2rem] p-8 sm:p-12 shadow-2xl shadow-primary/10 ring-1 ring-white/50">
-                <span class="material-symbols-outlined text-6xl text-primary mb-4">celebration</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface mb-3">Merci !</h2>
-                <p class="text-on-surface-variant text-base sm:text-lg max-w-md mx-auto leading-relaxed">
-                    Votre demande pour le mois gratuit a bien été reçue. Notre équipe traite votre dossier et vous recontactera dans les plus brefs délais pour finaliser l’activation.
-                </p>
-                <div class="mt-6 flex justify-center gap-2 text-sm text-on-surface-variant">
-                    <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">schedule</span> Traitement sous 24h</span>
-                    <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">mail</span> Un email de confirmation vous parviendra</span>
-                </div>
-                <button onclick="window.location.reload()" class="mt-8 inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-semibold px-5 py-2 rounded-full transition-all">Retour à l’accueil</button>
-            </div>
-        </div>
-    </main>
-
-    <div id="floatingBtn" class="fixed bottom-6 left-1/2 -translate-x-1/2 w-full max-w-lg lg:max-w-4xl px-5 sm:px-6 lg:px-8 pointer-events-none z-40 transition-all duration-200">
-        <button id="submitBtn" class="pointer-events-auto w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3.5 sm:py-5 rounded-[2rem] font-bold text-sm sm:text-xl shadow-2xl shadow-blue-500/40 flex items-center justify-center gap-2 sm:gap-3 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 cta-pulse">
-            <span class="material-symbols-outlined text-xl sm:text-3xl">celebration</span>
-            <span class="whitespace-nowrap">✅ Confirmer mon mois gratuit</span>
-            <span class="inline-flex items-center rounded-full bg-white/30 text-white text-[10px] sm:text-sm font-bold px-2 sm:px-3 py-0.5 sm:py-1 ml-0 sm:ml-1">1 mois offert</span>
-        </button>
-        <p class="text-center text-[10px] sm:text-xs text-blue-800/80 mt-2 sm:mt-3 pointer-events-auto font-medium">🔒 Aucun prélèvement maintenant · Je commence à travailler avec vous</p>
+<!-- HEADER avec logo tech + pas de numéro -->
+<header class="bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md py-3 shadow-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="logo-tech">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M2 17L12 22L22 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M2 12L12 17L22 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="12" cy="12" r="2" fill="white" stroke="white" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="flex items-baseline gap-1">
+        <span class="text-2xl font-black tracking-tight text-charcoal dark:text-white">MVP</span>
+        <span class="text-xs font-semibold bg-primary/10 text-primary px-2 py-0.5 rounded-full">mavillepro</span>
+      </div>
     </div>
+    <a href="#contact" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-5 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+      <span class="material-icons text-sm">description</span> Devis gratuit
+    </a>
+  </div>
+</header>
 
-    <script>
-        // Signature canvas - correction du décalage
-        const canvas = document.getElementById('signatureCanvas');
-        const ctx = canvas.getContext('2d');
-        let painting = false;
+<!-- HERO SECTION (sans téléphone) -->
+<section class="hero-gradient text-white py-12 md:py-20 relative overflow-hidden">
+  <div class="container mx-auto px-4 text-center relative z-10">
+    <div class="inline-flex items-center gap-1 bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-semibold tracking-wide mb-6 border border-white/20 text-white">
+      <span class="material-icons text-sm">rocket_launch</span>
+      FORMATION + ACCOMPAGNEMENT HYBRIDE
+    </div>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-sm">
+      Devenez <span class="underline decoration-4 decoration-primary">MVP</span> du digital<br/>
+      pour votre PME/TPE
+    </h1>
+    <div class="inline-block bg-white/10 backdrop-blur-sm text-white font-bold text-lg px-6 py-2 rounded-lg shadow-md mb-6 border border-white/30">
+      DEVIS STRATÉGIQUE 100% GRATUIT
+    </div>
+    <p class="text-lg md:text-xl font-medium mb-6 max-w-2xl mx-auto opacity-95 text-white">
+      Formation actionnable + accompagnement opérationnel sur 12 mois.<br/>
+      Apprenez à générer des leads ou déléguez-nous vos campagnes. <span class="font-bold">Résultats garantis.</span>
+    </p>
+    <div class="flex flex-col items-center justify-center gap-4 mb-6">
+      <a href="#contact" class="btn-cta text-white text-xl md:text-2xl font-bold py-4 px-8 rounded-full shadow-xl flex items-center gap-3 transition-transform hover:-translate-y-1">
+        <span class="material-icons">description</span>
+        Demander mon devis gratuit
+      </a>
+      <div class="flex items-center gap-2 text-sm font-medium bg-white/10 text-white px-4 py-1 rounded-full backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Audit offert sous 48h
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto mt-8">
+      <div class="glass-card p-4 rounded-xl flex flex-col items-center text-white">
+        <span class="material-icons text-3xl mb-2">school</span>
+        <h3 class="font-bold">Formation claire</h3>
+        <p class="text-sm opacity-90">De 0 à 100% : stratégie + exécution</p>
+      </div>
+      <div class="glass-card p-4 rounded-xl flex flex-col items-center text-white">
+        <span class="material-icons text-3xl mb-2">support_agent</span>
+        <h3 class="font-bold">Accompagnement 12 mois</h3>
+        <p class="text-sm opacity-90">Audits, templates, réunions mensuelles</p>
+      </div>
+      <div class="glass-card p-4 rounded-xl flex flex-col items-center text-white">
+        <div class="text-3xl font-bold mb-1">+30%</div>
+        <h3 class="font-bold">Leads qualifiés</h3>
+        <p class="text-sm opacity-90">Engagement contractuel sur KPI</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function resizeCanvas() {
-            // Récupérer la taille d'affichage (CSS)
-            const rect = canvas.getBoundingClientRect();
-            // On fixe les dimensions internes du canvas à la taille d'affichage réelle en pixels
-            canvas.width = rect.width;
-            canvas.height = rect.height;
-            // Appliquer les propriétés de dessin
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = '#0058bc';
-            // Restaurer l'image de signature si elle existe
-            const savedData = document.getElementById('signatureData').value;
-            if (savedData) {
-                const img = new Image();
-                img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                img.src = savedData;
-            } else {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = 'white';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-        }
+<!-- PROBLÈME + SOLUTION -->
+<section class="py-16 bg-secondary-bg dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto text-center mb-12">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white mb-4">Le problème <span class="text-primary">des PME-TPE</span></h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark text-lg">Vous savez que vous devez maîtriser l'acquisition digitale (publicité, growth, automatisation). Mais :</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="bg-white dark:bg-surface-dark p-5 rounded-xl shadow-sm"><i class="fas fa-clock text-primary text-2xl mb-3"></i><p class="font-semibold">Pas de temps</p><p class="text-sm text-gray-500">Ni compétences internes</p></div>
+        <div class="bg-white dark:bg-surface-dark p-5 rounded-xl shadow-sm"><i class="fas fa-euro-sign text-primary text-2xl mb-3"></i><p class="font-semibold">Agences trop chères</p><p class="text-sm text-gray-500">ou opaques</p></div>
+        <div class="bg-white dark:bg-surface-dark p-5 rounded-xl shadow-sm"><i class="fas fa-chalkboard-user text-primary text-2xl mb-3"></i><p class="font-semibold">Formations théoriques</p><p class="text-sm text-gray-500">peu actionnables</p></div>
+      </div>
+    </div>
+    <div class="max-w-4xl mx-auto text-center mt-12">
+      <div class="bg-primary/10 p-8 rounded-2xl border border-primary/30">
+        <h3 class="text-2xl font-bold mb-3 text-charcoal dark:text-white">Notre solution : <span class="text-primary">MVP Hybride</span></h3>
+        <p class="mb-4">Une formation claire ET un accompagnement opérationnel sur 12 mois. <br/>Soit vous apprenez à tout gérer, soit nous gérons vos campagnes pour vous. <strong>Transparence totale.</strong></p>
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle text-primary"></i><span>Stratégie sur-mesure</span></div>
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle text-primary"></i><span>Templates & audits</span></div>
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle text-primary"></i><span>Réunions mensuelles</span></div>
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle text-primary"></i><span>KPIs garantis</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Appeler au chargement et au redimensionnement
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+<!-- DIFFÉRENCIATION (tableau) -->
+<section class="py-16 bg-white dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10 text-charcoal dark:text-white">Pourquoi <span class="text-primary">MVP</span> est unique ?</h2>
+    <div class="overflow-x-auto max-w-4xl mx-auto">
+      <table class="w-full border-collapse bg-white dark:bg-surface-dark rounded-2xl shadow-md">
+        <thead>
+          <tr><th class="p-4 bg-primary/10 font-bold">Critère</th><th class="p-4 bg-primary/10 font-bold text-primary">MVP</th><th class="p-4 bg-primary/10 font-bold">Agences classiques</th><th class="p-4 bg-primary/10 font-bold">Formations seules</th></tr>
+        </thead>
+        <tbody class="divide-y">
+          <tr><td class="p-4 font-semibold">Modèle</td><td class="p-4">Hybride (formation + exécution)</td><td class="p-4 text-gray-500">Exécution pure (cher)</td><td class="p-4 text-gray-500">Théorique, peu actionnable</td></tr>
+          <tr><td class="p-4 font-semibold">Transparence</td><td class="p-4">Totale, accès aux données</td><td class="p-4 text-gray-500">Boîte noire, contrats opaques</td><td class="p-4 text-gray-500">Pas de suivi post-formation</td></tr>
+          <tr><td class="p-4 font-semibold">Adapté aux PME</td><td class="p-4">Budget, temps, besoins réels</td><td class="p-4 text-gray-500">Cible grands comptes</td><td class="p-4 text-gray-500">Contenu générique</td></tr>
+          <tr><td class="p-4 font-semibold">Engagement KPI</td><td class="p-4">Oui (+30% leads ou -50% CPA)</td><td class="p-4 text-gray-500">Rarement</td><td class="p-4 text-gray-500">Non</td></tr>
+        </tbody>
+      82
+    </div>
+  </div>
+</section>
 
-        function getCanvasCoordinates(e) {
-            const rect = canvas.getBoundingClientRect();
-            let clientX, clientY;
-            if (e.touches) {
-                clientX = e.touches[0].clientX;
-                clientY = e.touches[0].clientY;
-            } else {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            }
-            // Coordonnées relatives au canvas (en pixels)
-            let x = clientX - rect.left;
-            let y = clientY - rect.top;
-            // Limiter aux bords du canvas
-            x = Math.max(0, Math.min(canvas.width, x));
-            y = Math.max(0, Math.min(canvas.height, y));
-            return { x, y };
-        }
+<!-- OFFRE UNIQUE (sans prix, sans numéro) -->
+<section class="py-16 bg-secondary-bg dark:bg-gray-900">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Une seule offre <span class="text-primary">tout-en-un</span></h2>
+    <p class="mb-8 text-text-muted-light max-w-2xl mx-auto">Formation complète + accompagnement personnalisé sur 12 mois. Vous apprenez, nous exécutons – ou les deux. À votre rythme.</p>
+    <div class="max-w-3xl mx-auto bg-white dark:bg-surface-dark rounded-2xl shadow-xl border border-primary/20 overflow-hidden">
+      <div class="bg-gradient-to-r from-primary to-secondary p-6 text-white">
+        <div class="flex justify-center mb-2"><i class="fas fa-crown text-3xl"></i></div>
+        <h3 class="text-2xl font-bold">Programme MVP complet</h3>
+        <p class="text-white/80">Formation + Accompagnement 12 mois</p>
+      </div>
+      <div class="p-8 text-left">
+        <ul class="space-y-4">
+          <li class="flex gap-3 items-start"><i class="fas fa-check-circle text-primary text-xl mt-0.5"></i><span><strong>Accès illimité à la plateforme de formation</strong> – modules vidéo, templates, checklists, études de cas.</span></li>
+          <li class="flex gap-3 items-start"><i class="fas fa-check-circle text-primary text-xl mt-0.5"></i><span><strong>Audit stratégique initial</strong> – analyse de votre marché, concurrence, opportunités digitales.</span></li>
+          <li class="flex gap-3 items-start"><i class="fas fa-check-circle text-primary text-xl mt-0.5"></i><span><strong>Accompagnement mensuel</strong> – réunions de pilotage, suivi des KPI, ajustements tactiques.</span></li>
+          <li class="flex gap-3 items-start"><i class="fas fa-check-circle text-primary text-xl mt-0.5"></i><span><strong>Gestion possible des campagnes</strong> (Google Ads, Meta, LinkedIn, automation) – vous déléguez ou vous appliquez.</span></li>
+          <li class="flex gap-3 items-start"><i class="fas fa-check-circle text-primary text-xl mt-0.5"></i><span><strong>Engagement sur résultats</strong> : +30% de leads qualifiés ou -50% du coût par acquisition.</span></li>
+          <li class="flex gap-3 items-start"><i class="fas fa-check-circle text-primary text-xl mt-0.5"></i><span><strong>Support prioritaire par chat et email</strong> (réponse < 24h).</span></li>
+        </ul>
+        <div class="mt-8 text-center">
+          <a href="#contact" class="btn-cta text-white px-8 py-4 rounded-xl font-bold text-lg inline-flex items-center gap-2 shine-effect">
+            <span class="material-icons">request_quote</span> Demander un devis personnalisé
+          </a>
+          <p class="text-sm text-gray-500 mt-4">Devis gratuit, sans engagement. Paiement fractionné possible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function startPaint(e) {
-            painting = true;
-            const { x, y } = getCanvasCoordinates(e);
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-            ctx.lineTo(x, y);
-            ctx.stroke();
-            e.preventDefault();
-        }
+<!-- TÉMOIGNAGES (avis clients) -->
+<section class="py-16 bg-white dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white mb-2">Ils sont devenus <span class="text-primary">MVP</span></h2>
+      <p class="text-text-muted-light dark:text-text-muted-dark">PME-TPE accompagnées, résultats concrets</p>
+      <div class="flex justify-center mt-3 gap-1 text-primary text-xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-sm text-gray-500 ml-2">4.9/5 (35 avis)</span></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+        <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">S</div><div><div class="font-bold">Sophie L.</div><div class="text-xs text-gray-500">Artisanat, 8 salariés</div></div></div>
+        <div class="flex text-primary text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="text-sm italic">"Le programme MVP nous a permis de doubler nos leads qualifiés en 4 mois. La formation est ultra-pratique, et l'accompagnement nous a évité de perdre du temps."</p>
+      </div>
+      <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+        <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">M</div><div><div class="font-bold">Marc D.</div><div class="text-xs text-gray-500">Commerce local, 12 salariés</div></div></div>
+        <div class="flex text-primary text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="text-sm italic">"J'ai délégué toute ma stratégie Google Ads à l'équipe MVP. Résultat : réduction de 40% du coût par acquisition et CA en hausse. Transparence totale."</p>
+      </div>
+      <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+        <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">C</div><div><div class="font-bold">Cédric T.</div><div class="text-xs text-gray-500">B2B traditionnel, 25 salariés</div></div></div>
+        <div class="flex text-primary text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="text-sm italic">"La formation MVP nous a donné les clés pour internaliser notre acquisition. Aujourd'hui, notre équipe maîtrise les campagnes et nous économisons chaque mois."</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function paint(e) {
-            if (!painting) return;
-            const { x, y } = getCanvasCoordinates(e);
-            ctx.lineTo(x, y);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-            e.preventDefault();
-        }
+<!-- FAQ -->
+<section class="py-16 bg-secondary-bg dark:bg-gray-900">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-3xl font-bold text-charcoal dark:text-white">Questions <span class="text-primary">fréquentes</span></h2>
+    </div>
+    <div class="space-y-4">
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>🎯 À qui s'adresse MVP ?</span><span class="material-icons transition-transform">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Aux PME-TPE (1 à 50 salariés) dans les secteurs peu digitalisés : artisans, commerces locaux, B2B traditionnels. Vous avez une urgence à vous transformer ? MVP est fait pour vous.</p></div></div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>💰 Comment se passe le paiement fractionné ?</span><span class="material-icons transition-transform">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Nous utilisons des solutions comme Alma ou Sequra. Vous pouvez payer en 3 ou 4 fois sans frais. Demandez-nous un devis personnalisé.</p></div></div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>📈 Quels résultats concrets puis-je attendre ?</span><span class="material-icons transition-transform">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">Nous nous engageons sur des KPI : +30% de leads qualifiés en 3 mois ou réduction de 50% du coût par acquisition. En cas de non-atteinte, nous ajustons la stratégie sans frais supplémentaires.</p></div></div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm"><button class="faq-btn w-full flex items-center justify-between p-6 text-left font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"><span>🕐 Combien de temps dure l'accompagnement ?</span><span class="material-icons transition-transform">expand_more</span></button><div class="faq-content px-6 text-text-muted-light dark:text-gray-400"><p class="pb-6">La formule standard est de 12 mois, mais nous proposons aussi des accompagnements à la carte. La formation seule est accessible à vie.</p></div></div>
+    </div>
+  </div>
+</section>
 
-        function endPaint() {
-            painting = false;
-            // Sauvegarder l'image en base64
-            const dataURL = canvas.toDataURL('image/png');
-            document.getElementById('signatureData').value = dataURL;
-        }
+<!-- CONTACT RAPIDE (sans numéro, sans email) -->
+<section id="contact" class="py-16 bg-white dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-bold mb-4"><span class="material-icons text-sm">send</span>AUDIT GRATUIT</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Besoin d'un <span class="text-primary">devis stratégique</span> ?</h2>
+        <p class="text-text-muted-light dark:text-gray-400 mb-6">Remplissez le formulaire et nous vous répondons sous <strong class="text-primary">15 minutes</strong> pour discuter de votre projet digital.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4"><div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white"><i class="fas fa-calendar-check"></i></div><div><div class="text-sm text-gray-500">Disponibilité</div><div class="font-bold text-xl">Réponse sous 15 min</div></div></div>
+          <div class="flex items-center gap-4"><div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-white"><i class="fas fa-chart-line"></i></div><div><div class="text-sm text-gray-500">Garantie KPI</div><div class="font-bold text-xl">Résultats contractuels</div></div></div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-surface-dark rounded-2xl p-6 shadow-lg reveal">
+        <h3 class="text-xl font-bold mb-4 text-charcoal dark:text-white">Demande de devis express</h3>
+        <form id="contact-form" class="space-y-4" onsubmit="sendForm(event);">
+          <div class="grid sm:grid-cols-2 gap-4"><div><label class="block text-sm font-semibold mb-1">Prénom *</label><input id="prenom" type="text" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" required></div><div><label class="block text-sm font-semibold mb-1">Nom *</label><input id="nom" type="text" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" required></div></div>
+          <div><label class="block text-sm font-semibold mb-1">Téléphone *</label><input id="telephone" type="tel" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20" required></div>
+          <div><label class="block text-sm font-semibold mb-1">Email</label><input id="email" type="email" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20"></div>
+          <div><label class="block text-sm font-semibold mb-1">Chiffre d'affaires annuel</label><select id="ca" class="w-full px-4 py-2 rounded-xl border border-gray-300"><option>&lt; 500k€</option><option>500k€ – 1M€</option><option>1M€ – 5M€</option><option>&gt; 5M€</option></select></div>
+          <div><label class="block text-sm font-semibold mb-1">Message</label><textarea id="message" rows="3" class="w-full px-4 py-2 rounded-xl border border-gray-300" placeholder="Parlez-nous de vos besoins en acquisition digitale..."></textarea></div>
+          <button type="submit" class="w-full btn-cta text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2"><span class="material-icons">send</span>Envoyer ma demande</button>
+        </form>
+        <p class="text-xs text-center text-gray-400 mt-4">Vos données sont confidentielles. Un conseiller vous recontacte sous 15 min.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        canvas.addEventListener('mousedown', startPaint);
-        canvas.addEventListener('mousemove', paint);
-        canvas.addEventListener('mouseup', endPaint);
-        canvas.addEventListener('mouseleave', endPaint);
-        canvas.addEventListener('touchstart', startPaint);
-        canvas.addEventListener('touchmove', paint);
-        canvas.addEventListener('touchend', endPaint);
-        canvas.addEventListener('touchcancel', endPaint);
+<!-- FOOTER (sans numéro ni email) -->
+<footer class="bg-surface-light dark:bg-gray-900 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+  <div class="container mx-auto px-4 text-center">
+    <div class="flex justify-center mb-6">
+      <div class="logo-tech w-12 h-12">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M2 17L12 22L22 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M2 12L12 17L22 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="12" cy="12" r="2" fill="white" stroke="white" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+    <p class="text-sm text-gray-500 max-w-md mx-auto">MVP – Le programme hybride qui rend les PME-TPE autonomes sur l'acquisition digitale. Formation + accompagnement, sans jargon, avec des résultats garantis.</p>
+    <div class="flex justify-center gap-6 mt-6 text-sm text-gray-500">
+      <a href="#" class="hover:text-primary">Mentions légales</a>
+      <a href="#" class="hover:text-primary">Confidentialité</a>
+      <a href="#contact" class="hover:text-primary">Devis gratuit</a>
+    </div>
+    <div class="mt-8 pt-4 text-xs text-gray-400">© 2025 MVP – MavillePro. Tous droits réservés.</div>
+  </div>
+</footer>
 
-        document.getElementById('clearSignature').addEventListener('click', () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'white';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            document.getElementById('signatureData').value = '';
-        });
+<!-- STICKY CTA (sans téléphone) -->
+<div class="sticky-cta bg-white dark:bg-surface-dark shadow-2xl border-t dark:border-gray-700" id="sticky-cta">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex items-center justify-between">
+      <div class="hidden sm:block"><div class="font-bold text-charcoal dark:text-white">Prêt à devenir MVP ?</div><div class="text-sm text-gray-500">Audit stratégique offert</div></div>
+      <a href="#contact" class="btn-cta text-white px-6 py-2 rounded-xl font-bold text-center">Devis gratuit</a>
+    </div>
+  </div>
+</div>
 
-        // Mapping des champs avec les identifiants du nouveau Google Form
-        const mapping = {
-            prenom: "entry.1065046570",
-            nom: "entry.1415507476",
-            email: "entry.669495302",
-            pays: "entry.1522005248",
-            adresse: "entry.2015732434",
-            ville: "entry.1591403477",
-            code_postal: "entry.1357869243",
-            titulaire: "entry.2064233283",
-            iban: "entry.1032866568",
-            fait_a: "entry.1032718638",
-            date_contrat: "entry.1298713110",
-            signature: "entry.130037026"
-        };
+<!-- SUCCESS POPUP -->
+<div class="popup-overlay" id="success-popup"><div class="bg-white dark:bg-surface-dark rounded-2xl p-8 max-w-md text-center relative"><button onclick="closeSuccessPopup()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center"><span class="material-icons">close</span></button><div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"><span class="material-icons text-4xl text-primary">check_circle</span></div><h3 class="text-2xl font-bold mb-2">Demande envoyée ! 🎉</h3><p class="text-gray-600 mb-4">Merci pour votre confiance. Nous revenons vers vous sous 15 minutes pour fixer votre audit stratégique gratuit.</p><a href="#contact" class="inline-block btn-cta text-white px-6 py-2 rounded-xl font-bold">Retour au site</a></div></div>
 
-        const googleFormAction = "https://docs.google.com/forms/d/e/1FAIpQLScDlbQiMjK9hUlkGr32Pl-9cAdN7sg8_TsEKzdxXQRwjBOj-A/formResponse";
-
-        const submitBtn = document.getElementById('submitBtn');
-        const form = document.getElementById('activationForm');
-        const formSection = document.getElementById('formSection');
-        const thankyouSection = document.getElementById('thankyouSection');
-        const floatingBtn = document.getElementById('floatingBtn');
-
-        submitBtn.addEventListener('click', function(event) {
-            const signatureData = document.getElementById('signatureData').value;
-            if (!signatureData) {
-                if (!confirm("Vous n'avez pas signé. Voulez-vous continuer sans signature ?")) {
-                    return;
-                }
-            }
-
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
-
-            const fields = {
-                prenom: document.getElementById('prenom').value.trim(),
-                nom: document.getElementById('nom').value.trim(),
-                email: document.getElementById('email').value.trim(),
-                pays: document.getElementById('pays').value.trim(),
-                adresse: document.getElementById('adresse').value.trim(),
-                ville: document.getElementById('ville').value.trim(),
-                code_postal: document.getElementById('code_postal').value.trim(),
-                titulaire: document.getElementById('titulaire').value.trim(),
-                iban: document.getElementById('iban').value.trim(),
-                fait_a: document.getElementById('fait_a').value.trim(),
-                date_contrat: document.getElementById('date_contrat').value,
-                signature: document.getElementById('signatureData').value
-            };
-
-            const formData = new FormData();
-            for (let [fieldId, entryId] of Object.entries(mapping)) {
-                const value = fields[fieldId];
-                if (value && entryId) {
-                    formData.append(entryId, value);
-                }
-            }
-            formData.append('submit', 'Envoyer');
-
-            submitBtn.disabled = true;
-            const originalBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span class="material-symbols-outlined text-xl sm:text-3xl">hourglass_empty</span> Envoi en cours...';
-
-            fetch(googleFormAction, {
-                method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            }).then(() => {
-                formSection.classList.add('hidden');
-                floatingBtn.classList.add('hidden');
-                thankyouSection.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }).catch((error) => {
-                console.error('Erreur d\'envoi:', error);
-                alert('Une erreur est survenue. Veuillez réessayer.');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
-            });
-        });
-    </script>
+<script>
+  // Sticky CTA
+  window.addEventListener('scroll', () => {
+    const sticky = document.getElementById('sticky-cta');
+    if (window.scrollY > 500) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  });
+  // FAQ accordion
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-icons');
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.faq-btn .material-icons').forEach(i => i.style.transform = 'rotate(0deg)');
+      if (!isOpen) {
+        content.classList.add('open');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+  function closeSuccessPopup() { document.getElementById('success-popup').classList.remove('active'); }
+  function showSuccessMessage() {
+    document.getElementById('success-popup').classList.add('active');
+    for (let i = 0; i < 50; i++) {
+      let conf = document.createElement('div');
+      conf.className = 'confetti';
+      conf.style.left = Math.random() * 100 + 'vw';
+      conf.style.background = ['#3B82F6', '#8B5CF6', '#2563EB'][Math.floor(Math.random() * 3)];
+      conf.style.animationDelay = Math.random() * 2 + 's';
+      document.body.appendChild(conf);
+      setTimeout(() => conf.remove(), 3000);
+    }
+  }
+  function sendForm(event) {
+    event.preventDefault();
+    const prenom = document.getElementById('prenom').value.trim();
+    const nom = document.getElementById('nom').value.trim();
+    const tel = document.getElementById('telephone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const ca = document.getElementById('ca').value;
+    const msg = document.getElementById('message').value.trim();
+    if (!prenom || !nom || !tel) return alert('Veuillez remplir prénom, nom et téléphone.');
+    // Simuler envoi (pas de numéro ni mail visible)
+    console.log("Demande envoyée :", { prenom, nom, tel, email, ca, msg });
+    showSuccessMessage();
+    document.getElementById('contact-form').reset();
+  }
+  // Reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('active')), { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+</script>
 </body>
 </html>
