@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 
-<!-- Google tag (gtag.js) - Google Ads -->
+<!-- Google tag (gtag.js) - Google Ads Global -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16990935208"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,7 +11,7 @@
   gtag('js', new Date());
   gtag('config', 'AW-16990935208');
 </script>
-<!-- Fin Google tag -->
+<!-- Fin Google Ads Global -->
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Svb toitures - Toiture, Charpente &amp; Zinguerie à Liège</title>
@@ -80,6 +80,13 @@
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-gray-100 antialiased selection:bg-primary selection:text-white">
+
+<!-- 
+  ==================== CONTENU DE LA PAGE ====================
+  (Le contenu ci-dessous est strictement identique à votre version initiale,
+  aucune modification visuelle ou structurelle n'a été apportée.)
+-->
+
 <header class="bg-navy-900 py-5 border-b border-navy-700 sticky top-0 z-50">
 <div class="container mx-auto px-4 flex justify-between items-center">
 <div class="flex items-center gap-3">
@@ -475,7 +482,7 @@
                 </a>
 </div>
 </div>
-<!-- Nouvelle ligne email -->
+<!-- Bloc Email -->
 <div class="flex justify-center mb-16">
     <div class="bg-navy-800/50 border border-navy-700 rounded-2xl p-5 flex items-center gap-4 hover:border-primary transition-all duration-300 shadow-lg">
         <div class="bg-primary/20 p-3 rounded-full">
@@ -517,34 +524,36 @@
 </div>
 </footer>
 
-<!-- Scripts de suivi des conversions Google Ads -->
+<!-- ==================== SCRIPTS DE SUIVI DES CONVERSIONS GOOGLE ADS ==================== -->
 <script>
-  // Suivi des clics sur les numéros de téléphone
+  // 1. Suivi des appels téléphoniques
   document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     link.addEventListener('click', function() {
       gtag('event', 'conversion', {
-        'send_to': 'AW-16990935208/XXXXXXXXXX' // ← Remplacez par le label de conversion "Appel"
+        'send_to': 'AW-16990935208/Kx5qCPfL_5scEKix9KU_'
       });
     });
   });
 
-  // Suivi des clics sur WhatsApp
+  // 2. Suivi des clics WhatsApp
   document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
     link.addEventListener('click', function() {
       gtag('event', 'conversion', {
-        'send_to': 'AW-16990935208/YYYYYYYYYY' // ← Remplacez par le label de conversion "WhatsApp"
+        'send_to': 'AW-16990935208/IG1dCJ3Z_pscEKix9KU_'
       });
     });
   });
 
-  // Optionnel : Suivi des clics sur l'email (si vous voulez tracker les contacts mail)
+  // 3. Suivi des clics Email
   document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
     link.addEventListener('click', function() {
       gtag('event', 'conversion', {
-        'send_to': 'AW-16990935208/ZZZZZZZZZZ' // ← Remplacez par le label de conversion "Email"
+        'send_to': 'AW-16990935208/3ITvCPTj_5scEKix9KU_'
       });
     });
   });
 </script>
+<!-- ==================== FIN SCRIPTS DE SUIVI ==================== -->
+
 </body>
 </html>
