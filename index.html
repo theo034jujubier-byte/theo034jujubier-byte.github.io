@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+
+<!-- Google tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16990935208"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16990935208');
+</script>
+<!-- Fin Google tag -->
+
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Svb toitures - Toiture, Charpente &amp; Zinguerie à Liège</title>
 <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -506,5 +516,35 @@
 </div>
 </div>
 </footer>
+
+<!-- Scripts de suivi des conversions Google Ads -->
+<script>
+  // Suivi des clics sur les numéros de téléphone
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', function() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16990935208/XXXXXXXXXX' // ← Remplacez par le label de conversion "Appel"
+      });
+    });
+  });
+
+  // Suivi des clics sur WhatsApp
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', function() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16990935208/YYYYYYYYYY' // ← Remplacez par le label de conversion "WhatsApp"
+      });
+    });
+  });
+
+  // Optionnel : Suivi des clics sur l'email (si vous voulez tracker les contacts mail)
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', function() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16990935208/ZZZZZZZZZZ' // ← Remplacez par le label de conversion "Email"
+      });
+    });
+  });
+</script>
 </body>
 </html>
